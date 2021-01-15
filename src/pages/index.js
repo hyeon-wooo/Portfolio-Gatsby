@@ -8,15 +8,26 @@ export default function Home() {
     <div className={HomeStyle.wrap}>
       <header className={HomeStyle.header}>
         <div className={HomeStyle.headerMenuContainer}>
-          <Link to="/" className={HomeStyle.headerMenu}>
-            menu
-          </Link>
-          <Link to="/" className={HomeStyle.headerMenu}>
-            menu
-          </Link>
-          <Link to="/" className={HomeStyle.headerMenu}>
-            menu
-          </Link>
+          <div className={HomeStyle.headerMenuBox}>
+            <Link to="/projectList" className={HomeStyle.headerMenu}>
+              프로젝트
+            </Link>
+          </div>
+          <div className={HomeStyle.headerMenuBox}>
+            <Link to="/" className={HomeStyle.headerMenu}>
+              프로필
+            </Link>
+          </div>
+          <div className={HomeStyle.headerMenuBox}>
+            <Link to="/" className={HomeStyle.headerMenu}>
+              자기소개서
+            </Link>
+          </div>
+          <div className={HomeStyle.headerMenuBox}>
+            <Link to="/" className={HomeStyle.headerMenu}>
+              보유 기술 현황
+            </Link>
+          </div>
         </div>
         <h1 className={HomeStyle.headerTitle}>Hello to KIM HYEON WOO</h1>
       </header>

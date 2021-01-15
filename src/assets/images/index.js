@@ -1,2 +1,6 @@
 exports.contentImg1 = require("./contentImg1.jpg")
 exports.contentImg2 = require("./contentImg2.jpg")
+exports.javascript = require("./javascript.png")
+exports.node = require("./node.png")
+exports.gatsby = require("./gatsby.png")
+exports.react = require("./react.png")

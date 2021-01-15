@@ -1,0 +1,75 @@
+.wrap {
+  width: 100%;
+  height: 200px;
+  margin: 15px 0 50px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.imgContainer {
+  flex: 1;
+  min-width: 200px;
+  height: 100%;
+  background-color: black;
+}
+.infoContainer {
+  flex: 2;
+  min-width: 200px;
+  /* background-color: green; */
+  height: 100%;
+  padding-left: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.infoSection1 {
+  width: 100%;
+}
+.infoSection1 p {
+  padding: 0;
+  margin: 0;
+  text-align: justify;
+}
+.infoSection1 ul {
+  margin-top: 5px;
+}
+.btnContainer {
+  flex: 0.6;
+  height: 100%;
+  /* background-color: yellow; */
+
+  display: flex;
+  align-items: center;
+}
+
+.btnDetail {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #6078ea;
+  text-align: center;
+  border-radius: 2px;
+  text-decoration: none;
+  color: #fbfbfb;
+}
+
+.techContainer {
+  width: 100%;
+  height: 30px;
+}
+.imgTech {
+  height: 100%;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .wrap {
+    height: 150px;
+  }
+  .imgContainer {
+    /* flex: 0; */
+    min-width: 0;
+    flex: 0;
+  }
+}
