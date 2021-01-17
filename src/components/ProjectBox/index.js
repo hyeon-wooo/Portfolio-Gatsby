@@ -21,8 +21,8 @@ export default ({ project }) => {
           onLoad={e => {
             const loadedImg = e.target
             const aspect = loadedImg.width / loadedImg.height
-            loadedImg.className =
-              aspect >= 1.3 ? "projectImg-horizontal" : "projectImg-vertical"
+            loadedImg.className +=
+              aspect >= 1.3 ? " projectImg-horizontal" : " projectImg-vertical"
           }}
         />
       </div>

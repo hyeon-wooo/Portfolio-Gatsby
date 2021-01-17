@@ -14,17 +14,17 @@ export default function Home() {
             </Link>
           </div>
           <div className={HomeStyle.headerMenuBox}>
-            <Link to="/" className={HomeStyle.headerMenu}>
+            <Link to="/profile" className={HomeStyle.headerMenu}>
               프로필
             </Link>
           </div>
           <div className={HomeStyle.headerMenuBox}>
-            <Link to="/" className={HomeStyle.headerMenu}>
+            <Link to="/introduce" className={HomeStyle.headerMenu}>
               자기소개서
             </Link>
           </div>
           <div className={HomeStyle.headerMenuBox}>
-            <Link to="/" className={HomeStyle.headerMenu}>
+            <Link to="/tech" className={HomeStyle.headerMenu}>
               보유 기술 현황
             </Link>
           </div>

@@ -3,6 +3,7 @@ import styles from "../styles/projectList.module.css"
 import { graphql, useStaticQuery } from "gatsby"
 import ProjectBox from "../components/ProjectBox"
 import FilterItem from "../components/FilterItem"
+import Layout from "../components/Layout"
 
 const ProjectListScreen = () => {
   const [filter, setFilter] = useState([])
@@ -41,8 +42,9 @@ const ProjectListScreen = () => {
   }
 
   useEffect(() => {
-    const selectedContainer = document.getElementById("selectedContainer")
-    ref_selectedContainer.current.onmousedown = e => {
+    // const s = document.getElementById("selectedContainer")
+    // console.log(s)
+    ref_selectedContainer.current.onmousedown = () => {
       isMousedown = true
     }
     ref_selectedContainer.current.onmouseup = () => {
@@ -53,7 +55,7 @@ const ProjectListScreen = () => {
     ref_selectedContainer.current.onmousemove = e => {
       if (isMousedown) {
         const delta = e.x - prevX
-        selectedContainer.scrollLeft -= delta
+        ref_selectedContainer.current.scrollLeft -= delta
         prevX = e.x
       }
     }
@@ -66,56 +68,56 @@ const ProjectListScreen = () => {
   )
 
   return (
-    <div className={styles.wrap}>
-      <div className={styles.centerWrap}>
-        <div className={styles.topTitleContainer}>
-          <div className={styles.topTitleBox}>
-            <h1 className={styles.topTitle}>Projects</h1>
+    <Layout title="Projects">
+      <div className={styles.contentInnerContainer}>
+        <div className={styles.searchContainer}>
+          <div className={styles.searchSelectContainer}>
+            <h3>총 {renderProjects.length}건</h3>
+            <select
+              className={styles.searchSelect}
+              onChange={e => updateFilter(e.target.value)}
+            >
+              <option defaultValue>기술 스택 필터</option>
+              <option>Javascript</option>
+              <option>React</option>
+              <option>React-Native</option>
+              <option>Node.js</option>
+              <option>Gatsby</option>
+              <option>Python</option>
+            </select>
+          </div>
+          <div
+            id="selectedContainer"
+            ref={ref_selectedContainer}
+            className={styles.selectedValueContainer}
+            // onMouseDown={() => (isMousedown = true)}
+            // onMouseUp={() => (isMousedown = false)}
+            // onMouseMove={e => {
+            //   if (isMousedown) {
+            //     const delta = e.x - prevX
+            //     e.target.scrollLeft -= delta
+            //     prevX = e.x
+            //   }
+            // }}
+          >
+            {filter.map((f, idx) => {
+              return (
+                <FilterItem
+                  value={f}
+                  key={idx}
+                  removeFilterItem={removedValue =>
+                    setFilter(filter.filter(v => v !== removedValue))
+                  }
+                />
+              )
+            })}
           </div>
         </div>
-        <div className={styles.contentContainer}>
-          <div className={styles.contentInnerContainer}>
-            <div className={styles.searchContainer}>
-              <div className={styles.searchSelectContainer}>
-                <h3>총 {renderProjects.length}건</h3>
-                <select
-                  className={styles.searchSelect}
-                  onChange={e => updateFilter(e.target.value)}
-                >
-                  <option defaultValue>기술 스택 필터</option>
-                  <option>Javascript</option>
-                  <option>React</option>
-                  <option>React-Native</option>
-                  <option>Node.js</option>
-                  <option>Gatsby</option>
-                  <option>Python</option>
-                </select>
-              </div>
-              <div
-                id="selectedContainer"
-                ref={ref_selectedContainer}
-                className={styles.selectedValueContainer}
-              >
-                {filter.map((f, idx) => {
-                  return (
-                    <FilterItem
-                      value={f}
-                      key={idx}
-                      removeFilterItem={removedValue =>
-                        setFilter(filter.filter(v => v !== removedValue))
-                      }
-                    />
-                  )
-                })}
-              </div>
-            </div>
-            {renderProjects.map((p, idx) => (
-              <ProjectBox key={idx} project={p} />
-            ))}
-          </div>
-        </div>
+        {renderProjects.map((p, idx) => (
+          <ProjectBox key={idx} project={p} />
+        ))}
       </div>
-    </div>
+    </Layout>
   )
 }
 
