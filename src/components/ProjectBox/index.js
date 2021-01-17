@@ -12,10 +12,20 @@ const techImgSrc = {
 }
 
 export default ({ project }) => {
-  console.log(project)
   return (
     <div className={styles.wrap}>
-      <div className={styles.imgContainer}></div>
+      <div className={styles.imgContainer}>
+        <img
+          className={styles.projectImg}
+          src={require(`../../projects/imgs/${project.link}-main.jpg`)}
+          onLoad={e => {
+            const loadedImg = e.target
+            const aspect = loadedImg.width / loadedImg.height
+            loadedImg.className =
+              aspect >= 1.3 ? "projectImg-horizontal" : "projectImg-vertical"
+          }}
+        />
+      </div>
       <div className={styles.infoContainer}>
         <div className={styles.infoSection1}>
           <h3>{project.name}</h3>

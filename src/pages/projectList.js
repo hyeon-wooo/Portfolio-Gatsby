@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import styles from "../styles/projectList.module.css"
 import { graphql, useStaticQuery } from "gatsby"
 import ProjectBox from "../components/ProjectBox"
+import FilterItem from "../components/FilterItem"
 
 const ProjectListScreen = () => {
   const [filter, setFilter] = useState([])
+  const [renderProjects, setRenderProjects] = useState([])
+  const ref_selectedContainer = useRef(null)
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -24,41 +27,6 @@ const ProjectListScreen = () => {
   let isMousedown = false
   let prevX = 0
 
-  useEffect(() => {
-    const selectedContainer = document.getElementById("selectedContainer")
-    selectedContainer.onmousedown = e => {
-      isMousedown = true
-    }
-    selectedContainer.onmouseup = () => {
-      isMousedown = false
-      prevX = 0
-    }
-
-    selectedContainer.onmousemove = e => {
-      if (isMousedown) {
-        const delta = e.x - prevX
-        selectedContainer.scrollLeft -= delta
-        prevX = e.x
-      }
-    }
-  }, [])
-
-  useEffect(() => {
-    //
-    console.log(filter)
-    if (filter.length) {
-      const selectedContainer = document.getElementById("selectedContainer")
-      console.log(selectedContainer)
-
-      const lastValue = filter[filter.length - 1]
-      let newBox = document.createElement("span")
-      newBox.className = styles.selectedValue
-      newBox.innerHTML = lastValue
-      selectedContainer.appendChild(newBox)
-      selectedContainer.scrollLeft = selectedContainer.scrollWidth
-    }
-  }, [filter])
-
   const updateFilter = value => {
     if (value !== "기술 스택 필터" && !filter.includes(value)) {
       setFilter([...filter, value])
@@ -72,7 +40,30 @@ const ProjectListScreen = () => {
     return true
   }
 
-  const { projects } = data.site.siteMetadata
+  useEffect(() => {
+    const selectedContainer = document.getElementById("selectedContainer")
+    ref_selectedContainer.current.onmousedown = e => {
+      isMousedown = true
+    }
+    ref_selectedContainer.current.onmouseup = () => {
+      isMousedown = false
+      prevX = 0
+    }
+
+    ref_selectedContainer.current.onmousemove = e => {
+      if (isMousedown) {
+        const delta = e.x - prevX
+        selectedContainer.scrollLeft -= delta
+        prevX = e.x
+      }
+    }
+    setRenderProjects(data.site.siteMetadata.projects)
+  }, [])
+
+  useEffect(
+    () => setRenderProjects(data.site.siteMetadata.projects.filter(filterFunc)),
+    [filter]
+  )
 
   return (
     <div className={styles.wrap}>
@@ -86,6 +77,7 @@ const ProjectListScreen = () => {
           <div className={styles.contentInnerContainer}>
             <div className={styles.searchContainer}>
               <div className={styles.searchSelectContainer}>
+                <h3>총 {renderProjects.length}건</h3>
                 <select
                   className={styles.searchSelect}
                   onChange={e => updateFilter(e.target.value)}
@@ -101,10 +93,23 @@ const ProjectListScreen = () => {
               </div>
               <div
                 id="selectedContainer"
+                ref={ref_selectedContainer}
                 className={styles.selectedValueContainer}
-              ></div>
+              >
+                {filter.map((f, idx) => {
+                  return (
+                    <FilterItem
+                      value={f}
+                      key={idx}
+                      removeFilterItem={removedValue =>
+                        setFilter(filter.filter(v => v !== removedValue))
+                      }
+                    />
+                  )
+                })}
+              </div>
             </div>
-            {projects.filter(filterFunc).map((p, idx) => (
+            {renderProjects.map((p, idx) => (
               <ProjectBox key={idx} project={p} />
             ))}
           </div>

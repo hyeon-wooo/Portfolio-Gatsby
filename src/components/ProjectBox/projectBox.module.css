@@ -12,7 +12,10 @@
   flex: 1;
   min-width: 200px;
   height: 100%;
-  background-color: black;
+  /* background-color: black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .infoContainer {
   flex: 2;
@@ -47,7 +50,7 @@
 .btnDetail {
   width: 100%;
   padding: 10px 0;
-  background-color: #6078ea;
+  background-color: #45518e;
   text-align: center;
   border-radius: 2px;
   text-decoration: none;
@@ -63,6 +66,10 @@
   margin-right: 20px;
 }
 
+.projectImg {
+  display: block;
+}
+
 @media screen and (max-width: 768px) {
   .wrap {
     height: 150px;
@@ -71,5 +78,8 @@
     /* flex: 0; */
     min-width: 0;
     flex: 0;
+  }
+  .projectImg {
+    display: none;
   }
 }

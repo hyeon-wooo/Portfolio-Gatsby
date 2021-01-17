@@ -18,3 +18,10 @@ div {
 ul {
   padding-left: 20px;
 }
+
+.projectImg-horizontal {
+  width: 100%;
+}
+.projectImg-vertical {
+  height: 100%;
+}
