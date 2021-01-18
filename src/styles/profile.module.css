@@ -1,3 +1,36 @@
 .contentInnerContainer {
   width: 90%;
 }
+
+.profileBox {
+  margin-top: 20px;
+  height: auto;
+  display: flex;
+  /* justify-content: flex-start; */
+  /* border: 1px solid black; */
+}
+.profileImg {
+  height: 200px;
+  box-shadow: 1px 1px 3px #444;
+}
+.infoContainer {
+  height: 100%;
+  margin-left: 20px;
+}
+.infoInnerBox {
+  height: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5px 0 5px 5px;
+}
+
+.imgInfo {
+  height: 85%;
+}
+
+.infoInnerBox p {
+  color: #444;
+  font-size: 15px;
+  margin-left: 8px;
+}

@@ -1,6 +1,6 @@
 const path = require("path")
 
-exports.createPage = ({ actions, graphql }) => {
+exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
   const blogPostTemplate = path.resolve(`템플릿 파일`)
 
