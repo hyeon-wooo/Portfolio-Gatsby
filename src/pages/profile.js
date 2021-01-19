@@ -82,6 +82,12 @@ export default () => {
               <AiOutlineStar color="#333" />
               <p>육군 병장 만기제대 | 2016.10 - 2018.07</p>
             </div>
+            <div className={styles.infoInnerBox}>
+              <AiOutlineStar color="#333" />
+              <a href="https://github.com/bvv8808" className={styles.link}>
+                https://github.com/bvv8808
+              </a>
+            </div>
           </div>
         </div>
         <CustomTable dHead={eduHead} dBody={eduBody} title="학력" />

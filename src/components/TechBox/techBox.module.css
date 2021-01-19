@@ -1,0 +1,27 @@
+.wrap {
+  width: 90%;
+  height: auto;
+  position: relative;
+  left: 5%;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.techTitleContainer {
+  height: 30px;
+  /* border: 1px solid blue; */
+  display: flex;
+  align-items: center;
+}
+.techTitle {
+  margin: 0;
+  padding: 0;
+}
+.techDetailContainer {
+  width: calc(100% - 30px);
+  border-top: 2px solid #444;
+  background-color: #fbfbfb88;
+  padding: 30px 15px;
+  /* box-shadow: 1px 1px 3px #444; */
+}
+.techLi {
+}
