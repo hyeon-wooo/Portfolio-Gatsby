@@ -17,7 +17,7 @@ export default ({ project }) => {
       <div className={styles.imgContainer}>
         <img
           className={styles.projectImg}
-          src={require(`../../projects/imgs/${project.link}-main.jpg`)}
+          src={`/projectImgs/${project.link}/${project.link}-main.png`}
           onLoad={e => {
             const loadedImg = e.target
             const aspect = loadedImg.width / loadedImg.height

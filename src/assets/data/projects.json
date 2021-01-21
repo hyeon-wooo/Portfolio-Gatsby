@@ -1,0 +1,16 @@
+[
+  {
+    "name": "VocaGlory",
+    "tech": ["React-Native"],
+    "description": "안드로이드 전용 영단어 어플",
+    "term": "2020.10 - 2020.10",
+    "link": "vocaglory"
+  },
+  {
+    "name": "MyProject2",
+    "tech": ["Javascript", "React", "Gatsby", "Python"],
+    "description": "나의 두번째 프로젝트",
+    "term": "2021.01 - 2021.02",
+    "link": "vocaglory"
+  }
+]

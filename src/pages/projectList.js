@@ -6,24 +6,26 @@ import FilterItem from "../components/FilterItem"
 import Layout from "../components/Layout"
 
 const ProjectListScreen = () => {
+  const projects = require("../assets/data/projects.json")
+
   const [filter, setFilter] = useState([])
-  const [renderProjects, setRenderProjects] = useState([])
+  const [renderProjects, setRenderProjects] = useState(projects)
   const ref_selectedContainer = useRef(null)
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          projects {
-            name
-            tech
-            description
-            term
-            link
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     site {
+  //       siteMetadata {
+  //         projects {
+  //           name
+  //           tech
+  //           description
+  //           term
+  //           link
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   let isMousedown = false
   let prevX = 0
@@ -59,13 +61,9 @@ const ProjectListScreen = () => {
         prevX = e.x
       }
     }
-    setRenderProjects(data.site.siteMetadata.projects)
   }, [])
 
-  useEffect(
-    () => setRenderProjects(data.site.siteMetadata.projects.filter(filterFunc)),
-    [filter]
-  )
+  useEffect(() => setRenderProjects(projects.filter(filterFunc)), [filter])
 
   return (
     <Layout title="Projects">

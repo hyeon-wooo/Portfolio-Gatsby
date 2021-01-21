@@ -1,0 +1,9 @@
+.projectInnerContainer {
+  width: 90%;
+}
+
+.projectInnerContainer img {
+  position: relative;
+  left: 25%;
+  width: 50%;
+}
