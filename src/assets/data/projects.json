@@ -1,7 +1,7 @@
 [
   {
     "name": "VocaGlory",
-    "tech": ["React-Native"],
+    "tech": ["Typescript", "React-Native"],
     "description": "안드로이드 전용 영단어 어플",
     "term": "2020.10 - 2020.10",
     "link": "vocaglory"

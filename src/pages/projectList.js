@@ -77,6 +77,7 @@ const ProjectListScreen = () => {
             >
               <option defaultValue>기술 스택 필터</option>
               <option>Javascript</option>
+              <option>Typescript</option>
               <option>React</option>
               <option>React-Native</option>
               <option>Node.js</option>

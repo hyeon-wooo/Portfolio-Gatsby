@@ -8,11 +8,13 @@ export default ({ techTitle, techDetails }) => {
         <h3 className={styles.techTitle}>{techTitle}</h3>
       </div>
       <div className={styles.techDetailContainer}>
-        {techDetails.map((d, idx) => (
-          <li className={styles.techLi} key={idx}>
-            {d}
-          </li>
-        ))}
+        <ul>
+          {techDetails.map((d, idx) => (
+            <li className={styles.techLi} key={idx}>
+              {d}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   )

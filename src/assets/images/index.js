@@ -4,6 +4,8 @@ exports.javascript = require("./javascript.png")
 exports.node = require("./node.png")
 exports.gatsby = require("./gatsby.png")
 exports.react = require("./react.png")
+exports.typescript = require("./typescript.png")
+exports.python = require("./python.png")
 
 exports.iconHouse = require("./house.png")
 exports.iconMail = require("./mail.png")

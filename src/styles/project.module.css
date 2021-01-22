@@ -7,3 +7,30 @@
   left: 25%;
   width: 50%;
 }
+
+.projectInnerContainer h3 {
+  margin-block-start: 1.5em;
+}
+.projectInnerContainer h1 {
+  margin-block-start: 1.5em;
+}
+
+.projectInnerContainer li {
+  margin-bottom: 10px;
+}
+
+.projectInnerContainer code {
+  background: rgba(27, 31, 35, 0.05);
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  border-radius: 3px;
+
+  font-family: sans-serif;
+}
+
+.projectInnerContainer figcaption {
+  text-align: center;
+  font-size: 100%;
+  font-weight: bold;
+  margin-top: 50px;
+}

@@ -32,7 +32,7 @@ export default function Home() {
         <h1 className={HomeStyle.headerTitle}>Hello to KIM HYEON WOO</h1>
       </header>
       <div className={HomeStyle.contentContainer}>
-        <img src={contentImg1} alt="" className={HomeStyle.contentImg} />
+        {/* <img src={contentImg1} alt="" className={HomeStyle.contentImg} /> */}
         <div className={HomeStyle.contentDescription}>
           <h3 className={HomeStyle.introTitle}>방문을 환영합니다</h3>
           <p className={HomeStyle.introDescription}>
@@ -44,11 +44,10 @@ export default function Home() {
             개발자의 더 많은 프로젝트가 궁금하시다면 아래의 버튼을 통해
             프로젝트를 확인해 주시길 바랍니다.
           </p>
-          {/* <div className="linkContainer"> */}
+
           <Link to="/projectList" className={HomeStyle.btnToProjectList}>
             PROJECT LIST
           </Link>
-          {/* </div> */}
         </div>
       </div>
     </div>

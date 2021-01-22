@@ -1,6 +1,13 @@
 import React from "react"
 import styles from "./projectBox.module.css"
-import { react, javascript, node, gatsby } from "../../assets/images"
+import {
+  react,
+  javascript,
+  node,
+  gatsby,
+  typescript,
+  python,
+} from "../../assets/images"
 import { Link } from "gatsby"
 
 const techImgSrc = {
@@ -9,6 +16,8 @@ const techImgSrc = {
   Javascript: javascript,
   "Node.js": node,
   Gatsby: gatsby,
+  Typescript: typescript,
+  Python: python,
 }
 
 export default ({ project }) => {
