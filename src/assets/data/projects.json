@@ -4,20 +4,55 @@
     "tech": ["Typescript", "React-Native"],
     "description": "안드로이드 전용 영단어 어플",
     "term": "2020.10 - 2020.10",
-    "link": "vocaglory"
+    "link": "vocaglory",
+    "existMainImg": true
   },
   {
     "name": "Mat",
     "tech": ["Typescript", "React-Native"],
     "description": "모바일 명함 관리 어플",
     "term": "2020.07 - 2020.10",
-    "link": "mat"
+    "link": "mat",
+    "existMainImg": true
   },
   {
-    "name": "MyProject2",
-    "tech": ["Javascript", "React", "Gatsby", "Python"],
-    "description": "나의 두번째 프로젝트",
-    "term": "2021.01 - 2021.02",
-    "link": "vocaglory"
+    "name": "ExportedTalk-BE",
+    "tech": ["Javascript", "Node.js"],
+    "description": "내보낸 카카오톡 재구현을 위한 백엔드 서버",
+    "term": "2020.12 - 2020.12",
+    "link": "exportedtalk-be",
+    "existMainImg": false
+  },
+  {
+    "name": "ExportedTalk-FE",
+    "tech": ["Javascript", "React", "Redux"],
+    "description": "내보낸 카카오톡 재구현을 위한 프론트엔드 서버",
+    "term": "2020.12 - 2021.01",
+    "link": "exportedtalk-fe",
+    "existMainImg": true
+  },
+  {
+    "name": "BeepBeep-Morse",
+    "tech": ["Python"],
+    "description": "입력한 텍스트를 모스 부호로 출력해주는 윈도우 프로그램",
+    "term": "2019.10 - 2019.10",
+    "link": "beepbeep-morse",
+    "existMainImg": true
+  },
+  {
+    "name": "Portfolio-Gatsby",
+    "tech": ["Javascript", "React", "Gatsby"],
+    "description": "개인 포트폴리오 사이트",
+    "term": "2021.01 - 2021.01",
+    "link": "portfolio-gatsby",
+    "existMainImg": false
+  },
+  {
+    "name": "Node-Markdown-To-HTML",
+    "tech": ["Typescript", "Node.js"],
+    "description": "로컬의 .md 파일을 HTML 문자열로 변환해주는 라이브러리",
+    "term": "2020.12 - 2020.12",
+    "link": "md-to-html",
+    "existMainImg": true
   }
 ]

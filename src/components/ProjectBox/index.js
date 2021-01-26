@@ -7,6 +7,8 @@ import {
   gatsby,
   typescript,
   python,
+  redux,
+  NoImg,
 } from "../../assets/images"
 import { Link } from "gatsby"
 
@@ -18,6 +20,7 @@ const techImgSrc = {
   Gatsby: gatsby,
   Typescript: typescript,
   Python: python,
+  Redux: redux,
 }
 
 export default ({ project }) => {
@@ -26,7 +29,11 @@ export default ({ project }) => {
       <div className={styles.imgContainer}>
         <img
           className={styles.projectImg}
-          src={`/projectImgs/${project.link}/${project.link}-main.png`}
+          src={
+            project.existMainImg
+              ? `/projectImgs/${project.link}/${project.link}-main.png`
+              : NoImg
+          }
           onLoad={e => {
             const loadedImg = e.target
             const aspect = loadedImg.width / loadedImg.height

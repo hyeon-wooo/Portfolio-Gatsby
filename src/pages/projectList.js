@@ -1,9 +1,10 @@
 import React, { useEffect, useState, useRef } from "react"
 import styles from "../styles/projectList.module.css"
-import { graphql, useStaticQuery } from "gatsby"
+// import { graphql, useStaticQuery } from "gatsby"
 import ProjectBox from "../components/ProjectBox"
 import FilterItem from "../components/FilterItem"
 import Layout from "../components/Layout"
+import EmptyBox50 from "../components/EmptyBox50"
 
 const ProjectListScreen = () => {
   const projects = require("../assets/data/projects.json")
@@ -44,8 +45,6 @@ const ProjectListScreen = () => {
   }
 
   useEffect(() => {
-    // const s = document.getElementById("selectedContainer")
-    // console.log(s)
     ref_selectedContainer.current.onmousedown = () => {
       isMousedown = true
     }
@@ -83,21 +82,13 @@ const ProjectListScreen = () => {
               <option>Node.js</option>
               <option>Gatsby</option>
               <option>Python</option>
+              <option>Redux</option>
             </select>
           </div>
           <div
             id="selectedContainer"
             ref={ref_selectedContainer}
             className={styles.selectedValueContainer}
-            // onMouseDown={() => (isMousedown = true)}
-            // onMouseUp={() => (isMousedown = false)}
-            // onMouseMove={e => {
-            //   if (isMousedown) {
-            //     const delta = e.x - prevX
-            //     e.target.scrollLeft -= delta
-            //     prevX = e.x
-            //   }
-            // }}
           >
             {filter.map((f, idx) => {
               return (
@@ -115,6 +106,7 @@ const ProjectListScreen = () => {
         {renderProjects.map((p, idx) => (
           <ProjectBox key={idx} project={p} />
         ))}
+        <EmptyBox50 />
       </div>
     </Layout>
   )

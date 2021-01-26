@@ -6,8 +6,11 @@ exports.gatsby = require("./gatsby.png")
 exports.react = require("./react.png")
 exports.typescript = require("./typescript.png")
 exports.python = require("./python.png")
+exports.redux = require("./redux.png")
 
 exports.iconHouse = require("./house.png")
 exports.iconMail = require("./mail.png")
 exports.iconGun = require("./gun.png")
 exports.profile = require("./profile.jpeg")
+
+exports.NoImg = require("./noimg.png")
