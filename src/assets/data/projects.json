@@ -50,7 +50,7 @@
   {
     "name": "Node-Markdown-To-HTML",
     "tech": ["Typescript", "Node.js"],
-    "description": "로컬의 .md 파일을 HTML 문자열로 변환해주는 라이브러리",
+    "description": ".md 파일을 HTML로 변환해주는 라이브러리",
     "term": "2020.12 - 2020.12",
     "link": "md-to-html",
     "existMainImg": true

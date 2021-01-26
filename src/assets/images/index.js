@@ -14,3 +14,6 @@ exports.iconGun = require("./gun.png")
 exports.profile = require("./profile.jpeg")
 
 exports.NoImg = require("./noimg.png")
+
+exports.iconX = require("./iconX.svg")
+exports.iconMenu = require("./iconMenu.svg")

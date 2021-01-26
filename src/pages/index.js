@@ -1,9 +1,21 @@
-import React from "react"
+import React, { useRef } from "react"
 import { Link } from "gatsby"
 import HomeStyle from "../styles/home.module.css"
-import { contentImg1 } from "../assets/images"
+import { iconX, iconMenu } from "../assets/images"
 
 export default function Home() {
+  const ref_sideMenu = useRef(null)
+  const ref_btnMenu = useRef(null)
+
+  const transferSide = () => {
+    if (ref_sideMenu.current.style.display === "block") {
+      ref_sideMenu.current.style.display = "none"
+      ref_btnMenu.current.style.display = "block"
+    } else {
+      ref_sideMenu.current.style.display = "block"
+      ref_btnMenu.current.style.display = "none"
+    }
+  }
   return (
     <div className={HomeStyle.wrap}>
       <header className={HomeStyle.header}>
@@ -29,7 +41,45 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <h1 className={HomeStyle.headerTitle}>Hello to KIM HYEON WOO</h1>
+
+        <img
+          ref={ref_btnMenu}
+          onClick={transferSide}
+          src={iconMenu}
+          className={HomeStyle.btnMenu}
+        />
+        <div ref={ref_sideMenu} className={HomeStyle.sideMenu}>
+          <div className={HomeStyle.sideMenuTitleBox}>
+            <p className={HomeStyle.sideMenuTitle}>Hyeonwoo</p>
+            <img
+              src={iconX}
+              onClick={transferSide}
+              className={HomeStyle.btnX}
+            />
+          </div>
+          <div className={HomeStyle.sideMenus}>
+            <div className={HomeStyle.headerMenuBox}>
+              <Link to="/projectList" className={HomeStyle.headerMenu}>
+                프로젝트
+              </Link>
+            </div>
+            <div className={HomeStyle.headerMenuBox}>
+              <Link to="/profile" className={HomeStyle.headerMenu}>
+                프로필
+              </Link>
+            </div>
+            <div className={HomeStyle.headerMenuBox}>
+              <Link to="/introduce" className={HomeStyle.headerMenu}>
+                자기소개서
+              </Link>
+            </div>
+            <div className={HomeStyle.headerMenuBox}>
+              <Link to="/tech" className={HomeStyle.headerMenu}>
+                보유 기술 현황
+              </Link>
+            </div>
+          </div>
+        </div>
       </header>
       <div className={HomeStyle.contentContainer}>
         {/* <img src={contentImg1} alt="" className={HomeStyle.contentImg} /> */}
