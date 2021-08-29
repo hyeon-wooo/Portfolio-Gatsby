@@ -2,20 +2,27 @@
   width: 100%;
   /* min-width: 700px; */
   height: 100%;
-  overflow: auto;
+  /* overflow: auto; */
 
   display: flex;
   justify-content: center;
 
-  background-image: url(../../assets/images/back2.jpg);
+  background-image: url(../../assets/images/intro4.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+.filter {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #0006;
 }
 
 .centerWrap {
   /* background-color: silver; */
   width: 70%;
+  z-index: 100;
 }
 
 .topTitleContainer {
@@ -35,19 +42,22 @@
   justify-content: flex-start;
 }
 .topTitle {
+  font-family: "dohyeon";
   margin-top: 70px;
   padding: 0 0 8px 24px;
-  color: #aac3f5;
-  text-shadow: 1px 2px 3px #444;
+  color: #eed7ad;
+  text-shadow: 1px 1px 2px #777;
 }
 
 .contentContainer {
   width: 100%;
-  height: calc(100% - 147px);
+  height: auto;
+  /* height: calc(100% - 147px); */
   margin-top: 15px;
-  overflow: auto;
+  /* overflow: auto; */
 
   background-color: #eaeaeaea;
+  backdrop-filter: blur(3px);
   border-radius: 3px 3px 0 0;
 
   display: flex;

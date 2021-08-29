@@ -1,11 +1,29 @@
-import React, { useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { Link } from "gatsby"
 import HomeStyle from "../styles/home.module.css"
-import { iconX, iconMenu, intro1, intro2, intro3 } from "../assets/images"
+import {
+  iconX,
+  iconMenu,
+  intro1,
+  intro2,
+  intro3,
+  arrowDown,
+} from "../assets/images"
 
 export default function Home() {
   const ref_sideMenu = useRef(null)
   const ref_btnMenu = useRef(null)
+  const refMainMenu = useRef(null)
+
+  const [mainMenuOfffset, setMenuOffset] = useState()
+
+  useEffect(() => {
+    console.log("@@", mainMenuOfffset)
+  }, [mainMenuOfffset])
+
+  useEffect(() => {
+    setMenuOffset(refMainMenu.current.offsetTop)
+  }, [])
 
   const transferSide = () => {
     if (ref_sideMenu.current.style.display === "block") {
@@ -17,85 +35,45 @@ export default function Home() {
     }
   }
   return (
-    <div className={HomeStyle.wrap}>
-      {/* <header className={HomeStyle.header}>
-        <div className={HomeStyle.headerMenuContainer}>
-          <div className={HomeStyle.headerMenuBox}>
-            <Link to="/projectList" className={HomeStyle.headerMenu}>
-              프로젝트
-            </Link>
-          </div>
-          <div className={HomeStyle.headerMenuBox}>
-            <Link to="/profile" className={HomeStyle.headerMenu}>
-              프로필
-            </Link>
-          </div>
-          <div className={HomeStyle.headerMenuBox}>
-            <Link to="/introduce" className={HomeStyle.headerMenu}>
-              자기소개서
-            </Link>
-          </div>
-          <div className={HomeStyle.headerMenuBox}>
-            <Link to="/tech" className={HomeStyle.headerMenu}>
-              보유 기술 현황
-            </Link>
-          </div>
-        </div>
-
-        <img
-          ref={ref_btnMenu}
-          onClick={transferSide}
-          src={iconMenu}
-          className={HomeStyle.btnMenu}
-        />
-        <div ref={ref_sideMenu} className={HomeStyle.sideMenu}>
-          <div className={HomeStyle.sideMenuTitleBox}>
-            <p className={HomeStyle.sideMenuTitle}>Hyeonwoo</p>
-            <img
-              src={iconX}
-              onClick={transferSide}
-              className={HomeStyle.btnX}
-            />
-          </div>
-          <div className={HomeStyle.sideMenus}>
-            <div className={HomeStyle.headerMenuBox}>
-              <Link to="/projectList" className={HomeStyle.headerMenu}>
-                프로젝트
-              </Link>
-            </div>
-            <div className={HomeStyle.headerMenuBox}>
-              <Link to="/profile" className={HomeStyle.headerMenu}>
-                프로필
-              </Link>
-            </div>
-            <div className={HomeStyle.headerMenuBox}>
-              <Link to="/introduce" className={HomeStyle.headerMenu}>
-                자기소개서
-              </Link>
-            </div>
-            <div className={HomeStyle.headerMenuBox}>
-              <Link to="/tech" className={HomeStyle.headerMenu}>
-                보유 기술 현황
-              </Link>
-            </div>
-          </div>
-        </div>
-      </header> */}
-
+    <>
       <div className={HomeStyle.mainContentWrapper}>
-        <h1 className={HomeStyle.introTitle}>방문을 환영합니다</h1>
-        <p className={HomeStyle.introDescription}>
-          이 사이트는 개발자 김현우의 포트폴리오를 소개하기 위한 사이트이며
-          Gatsby Framework로 제작되었습니다.
-        </p>
-        <p className={HomeStyle.introDescription}>
-          페이지 상단 메뉴를 통해 필요한 정보를 열람하실수 있으며, 김현우
-          개발자의 더 많은 프로젝트가 궁금하시다면 아래의 버튼을 통해 프로젝트를
-          확인해 주시길 바랍니다.
-        </p>
+        <div style={{ flex: 1 }} />
+        <div
+          style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+        >
+          <h1 className={HomeStyle.introTitle}>개발자 김현우의 포트폴리오</h1>
+          <p className={HomeStyle.introDescription}>
+            저는 주니어 프론트엔드 개발자 김현우입니다.
+          </p>
+          <p className={HomeStyle.introDescription}>
+            더 쉽고 자유로운 프로그래밍을 위한 써드파티 라이브러리 제작에 관심이
+            많습니다.
+          </p>
+        </div>
+        <div
+          style={{
+            flex: 1,
+            justifyContent: "center",
+            display: "flex",
+            alignItems: "flex-end",
+          }}
+        >
+          <img
+            src={arrowDown}
+            className={HomeStyle.imgArrow}
+            onClick={() => {
+              console.log("@@2", mainMenuOfffset)
+              window.scrollTo({ top: mainMenuOfffset, behavior: "smooth" })
+            }}
+          />
+        </div>
       </div>
-      <div className={HomeStyle.mainMenuWrapper}>
-        <div className={HomeStyle.bgImgWrapper}></div>
+      <div
+        className={HomeStyle.mainMenuWrapper}
+        id="mainMenu"
+        ref={refMainMenu}
+      >
+        {/* <div className={HomeStyle.bgImgWrapper}></div> */}
 
         <div className={HomeStyle.mainMenuContainer}>
           <Link to="/projectList" className={HomeStyle.mainMenu}>
@@ -128,25 +106,6 @@ export default function Home() {
           </Link>
         </div>
       </div>
-
-      {/* <div className={HomeStyle.contentContainer}>
-        <div className={HomeStyle.contentDescription}>
-          <h3 className={HomeStyle.introTitle}>방문을 환영합니다</h3>
-          <p className={HomeStyle.introDescription}>
-            이 사이트는 개발자 김현우의 포트폴리오를 소개하기 위한 사이트이며
-            Gatsby Framework로 제작되었습니다.
-          </p>
-          <p className={HomeStyle.introDescription}>
-            페이지 상단 메뉴를 통해 필요한 정보를 열람하실수 있으며, 김현우
-            개발자의 더 많은 프로젝트가 궁금하시다면 아래의 버튼을 통해
-            프로젝트를 확인해 주시길 바랍니다.
-          </p>
-
-          <Link to="/projectList" className={HomeStyle.btnToProjectList}>
-            PROJECT LIST
-          </Link>
-        </div>
-      </div> */}
-    </div>
+    </>
   )
 }

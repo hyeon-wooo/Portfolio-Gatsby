@@ -6,7 +6,6 @@
 
 module.exports = {
   /* Your site config here */
-  pathPrefix: "/Portfolio-Gatsby",
   siteMetadata: {
     title: "Hi",
     projects: [

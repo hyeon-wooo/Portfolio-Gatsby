@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import styles from "../styles/profile.module.css"
 import CustomTable from "../components/CustomTable"
-import { profile } from "../assets/images"
+import { me } from "../assets/images"
 
 import { AiOutlineMail } from "@react-icons/all-files/ai/AiOutlineMail"
 import { HiOutlineHome } from "@react-icons/all-files/hi/HiOutlineHome"
@@ -15,10 +15,10 @@ const { cirtHead, cirtBody } = profileData.cirtification
 
 export default () => {
   return (
-    <Layout title="Profile">
+    <Layout title="PROFILE">
       <div className={styles.contentInnerContainer}>
         <div className={styles.profileBox}>
-          <img src={profile} alt="프로필 사진" className={styles.profileImg} />
+          <img src={me} alt="프로필 사진" className={styles.profileImg} />
           <div className={styles.infoContainer}>
             <div className={styles.infoInnerBox}>
               <h3>김현우</h3>
@@ -40,12 +40,6 @@ export default () => {
               <AiOutlineStar color="#333" />
               <a href="https://github.com/bvv8808" className={styles.link}>
                 https://github.com/bvv8808
-              </a>
-            </div>
-            <div className={styles.infoInnerBox}>
-              <AiOutlineStar color="#333" />
-              <a href="https://github.com/bvv8808" className={styles.link}>
-                성결대학교 미디어소프트웨어학과 졸업
               </a>
             </div>
           </div>

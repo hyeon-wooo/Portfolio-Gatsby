@@ -65,7 +65,7 @@ const ProjectListScreen = () => {
   useEffect(() => setRenderProjects(projects.filter(filterFunc)), [filter])
 
   return (
-    <Layout title="Projects">
+    <Layout title="PROJECTS">
       <div className={styles.contentInnerContainer}>
         <div className={styles.searchContainer}>
           <div className={styles.searchSelectContainer}>

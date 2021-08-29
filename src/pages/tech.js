@@ -11,7 +11,7 @@ const { goalTechHead, goalTechBody } = goalTechData
 
 export default () => {
   return (
-    <Layout title="Technology">
+    <Layout title="TECHNOLOGY">
       <div className={styles.contentInnerContainer}>
         <EmptyBox50 />
         <h2>보유 기술</h2>

@@ -4,6 +4,7 @@ import styles from "./layout.module.css"
 export default ({ children, title }) => {
   return (
     <div className={styles.wrap}>
+      <div className={styles.filter} />
       <div className={styles.centerWrap}>
         <div className={styles.topTitleContainer}>
           {/* <div className={styles.topTitleBox}> */}

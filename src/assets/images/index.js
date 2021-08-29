@@ -20,3 +20,8 @@ exports.iconMenu = require("./iconMenu.svg")
 exports.intro1 = require("./intro1.jpg")
 exports.intro2 = require("./intro2.jpg")
 exports.intro3 = require("./intro3.jpg")
+exports.intro4 = require("./intro4.jpeg")
+exports.intro5 = require("./intro5.jpeg")
+
+exports.arrowDown = require("./arrow-down.svg")
+exports.me = require("./me.jpg")

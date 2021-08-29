@@ -8,7 +8,7 @@ const introData = require("../assets/data/introduce.json")
 
 export default () => {
   return (
-    <Layout title="Introduce">
+    <Layout title="INTRODUCE">
       <div className={styles.contentInnerContainer}>
         {introData.map((d, idx) => (
           <IntroduceBox key={idx} title={d.title} content={d.content} />

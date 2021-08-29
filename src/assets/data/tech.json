@@ -35,10 +35,8 @@
       ]
     },
     {
-      "title": "Vue.js",
-      "details": [
-        "간단한 컴포넌트 작성, 기초적인 데이터 바인딩 및 라우팅이 가능한 수준"
-      ]
+      "title": "GraphQL",
+      "details": ["서버 단에서 리졸버와 쿼리 작성 가능", "variables 활용"]
     },
     {
       "title": "Gatsby.js",
@@ -91,9 +89,6 @@
   ],
   "goalTechData": {
     "goalTechHead": ["기술명", "목표 수준"],
-    "goalTechBody": [
-      ["Graphql", ["CRUD", "다양한 프레임워크에서 연동"]],
-      ["CI / CD", ["배포 자동화 숙달"]]
-    ]
+    "goalTechBody": [["CI / CD", ["배포 자동화 숙달"]]]
   }
 }

@@ -18,6 +18,34 @@
   font-family: "notoLight";
   src: url(../assets/fonts/NotoSansKR-Light.otf) format("truetype");
 }
+@font-face {
+  font-family: "jua";
+  src: url(../assets/fonts/Jua-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "dohyeon";
+  src: url(../assets/fonts/DoHyeon-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "appleBold";
+  src: url(../assets/fonts/AppleSDGothicNeoB.ttf) format("truetype");
+}
+@font-face {
+  font-family: "appleExtraBold";
+  src: url(../assets/fonts/AppleSDGothicNeoEB.ttf) format("truetype");
+}
+@font-face {
+  font-family: "appleHair";
+  src: url(../assets/fonts/AppleSDGothicNeoH.ttf) format("truetype");
+}
+@font-face {
+  font-family: "appleLight";
+  src: url(../assets/fonts/AppleSDGothicNeoL.ttf) format("truetype");
+}
+@font-face {
+  font-family: "appleMedium";
+  src: url(../assets/fonts/AppleSDGothicNeoM.ttf) format("truetype");
+}
 
 * {
   box-sizing: border-box;
