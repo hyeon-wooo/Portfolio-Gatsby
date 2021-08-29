@@ -42,6 +42,12 @@ export default () => {
                 https://github.com/bvv8808
               </a>
             </div>
+            <div className={styles.infoInnerBox}>
+              <AiOutlineStar color="#333" />
+              <a href="https://github.com/bvv8808" className={styles.link}>
+                성결대학교 미디어소프트웨어학과 졸업
+              </a>
+            </div>
           </div>
         </div>
         <CustomTable dHead={eduHead} dBody={eduBody} title="학력" />

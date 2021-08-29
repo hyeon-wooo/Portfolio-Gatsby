@@ -31,7 +31,7 @@ export default ({ project }) => {
           className={styles.projectImg}
           src={
             project.existMainImg
-              ? `/projectImgs/${project.link}/${project.link}-main.png`
+              ? `/projectImgs/${project.link}/main.png`
               : NoImg
           }
           onLoad={e => {

@@ -1,9 +1,93 @@
 .wrap {
-  background-image: url(../assets/images/back2.jpg);
+  background-image: url(../assets/images/intro3.jpg);
   background-size: cover;
+}
+.mainContentWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #00000066;
+}
+.mainContentWrapper h1 {
+  color: #f3f2f2;
+  text-shadow: 1px 2px 3px #444;
+}
+.mainMenuWrapper {
+  display: flex;
+  justify-content: center;
+}
+.bgImgWrapper {
+  position: absolute;
+  z-index: -10;
+  overflow: hidden;
+  background-image: url(../assets/images/intro1.jpg);
+  background-size: cover;
+  filter: brightness(0.65);
+}
+.bgImg1 {
+  width: 100%;
+}
+.mainMenuContainer {
+  display: grid;
+  width: 500px;
+  height: 500px;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+.mainMenuBox {
+  background-color: #133167dd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #444;
+  backdrop-filter: blur(3px);
+}
+.mainMenu {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  position: relative;
+}
+.mainMenuBox > h2 {
+  color: #fbfbfbcc;
+}
+.mainMenuBox > h3 {
+  color: #fbfbfbee;
+}
+.borderBox {
+  width: 30%;
+  height: 0;
+  border: 1px solid #999;
+  border-radius: 10px;
+}
+
+.sectionIntro {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.sectionIntro div {
+  flex: 1;
+  overflow: hidden;
+  /* height: 100%; */
+  transition: all 0.2 linear;
+}
+.sectionIntro div:hover {
+  opacity: 0.6;
+}
+.sectionIntro > div > img {
+  height: 100%;
 }
 
 .header {
+  position: absolute;
+  top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +107,10 @@
   display: flex;
   justify-content: center;
   min-width: 130px;
+  padding-bottom: 14px;
   /* border: 1px solid red; */
+  border-color: #fbfbfb;
+  transition: all 0.1s linear;
 }
 .headerMenuBox:hover {
   border-bottom: 2px solid #fbfbfb;
@@ -33,8 +120,8 @@
   margin: 0;
   text-decoration: none;
   text-align: center;
-  color: #fbfbfb;
-  text-shadow: 1px 1px 3px #444;
+  color: #446;
+  text-shadow: 1px 1px 1px #fbfbfb;
   font-size: 18px;
   /* margin: 0 15px; */
   padding: 0 10px;
@@ -80,11 +167,15 @@
 }
 
 .introTitle {
+  color: #fbfbfb;
 }
 .introDescription {
   line-height: 1.3;
   font-size: 18px;
-  text-align: justify;
+  text-align: center;
+  color: #fbfbfb;
+  padding: 0 10%;
+  word-break: keep-all;
 }
 
 .btnToProjectList {

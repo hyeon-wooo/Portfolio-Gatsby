@@ -17,3 +17,6 @@ exports.NoImg = require("./noimg.png")
 
 exports.iconX = require("./iconX.svg")
 exports.iconMenu = require("./iconMenu.svg")
+exports.intro1 = require("./intro1.jpg")
+exports.intro2 = require("./intro2.jpg")
+exports.intro3 = require("./intro3.jpg")

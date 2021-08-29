@@ -51,7 +51,7 @@ _모바일 명함 관리 어플 (안드로이드 전용)_
 
 <figcaption> [메인 화면] </figcaption>
 
-![caption="메인 화면"](/projectImgs/mat/mat-main.png "메인 화면")
+![caption="메인 화면"](/projectImgs/mat/main.png "메인 화면")
 
 <figcaption> [명함 교환(PIN 번호 발급)] </figcaption>
 

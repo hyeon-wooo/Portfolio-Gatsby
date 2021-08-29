@@ -6,9 +6,9 @@ export default ({ children, title }) => {
     <div className={styles.wrap}>
       <div className={styles.centerWrap}>
         <div className={styles.topTitleContainer}>
-          <div className={styles.topTitleBox}>
-            <h1 className={styles.topTitle}>{title}</h1>
-          </div>
+          {/* <div className={styles.topTitleBox}> */}
+          <h1 className={styles.topTitle}>{title}</h1>
+          {/* </div> */}
         </div>
         <div className={styles.contentContainer}>{children}</div>
       </div>

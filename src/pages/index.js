@@ -1,7 +1,7 @@
 import React, { useRef } from "react"
 import { Link } from "gatsby"
 import HomeStyle from "../styles/home.module.css"
-import { iconX, iconMenu } from "../assets/images"
+import { iconX, iconMenu, intro1, intro2, intro3 } from "../assets/images"
 
 export default function Home() {
   const ref_sideMenu = useRef(null)
@@ -18,7 +18,7 @@ export default function Home() {
   }
   return (
     <div className={HomeStyle.wrap}>
-      <header className={HomeStyle.header}>
+      {/* <header className={HomeStyle.header}>
         <div className={HomeStyle.headerMenuContainer}>
           <div className={HomeStyle.headerMenuBox}>
             <Link to="/projectList" className={HomeStyle.headerMenu}>
@@ -80,9 +80,56 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </header>
-      <div className={HomeStyle.contentContainer}>
-        {/* <img src={contentImg1} alt="" className={HomeStyle.contentImg} /> */}
+      </header> */}
+
+      <div className={HomeStyle.mainContentWrapper}>
+        <h1 className={HomeStyle.introTitle}>방문을 환영합니다</h1>
+        <p className={HomeStyle.introDescription}>
+          이 사이트는 개발자 김현우의 포트폴리오를 소개하기 위한 사이트이며
+          Gatsby Framework로 제작되었습니다.
+        </p>
+        <p className={HomeStyle.introDescription}>
+          페이지 상단 메뉴를 통해 필요한 정보를 열람하실수 있으며, 김현우
+          개발자의 더 많은 프로젝트가 궁금하시다면 아래의 버튼을 통해 프로젝트를
+          확인해 주시길 바랍니다.
+        </p>
+      </div>
+      <div className={HomeStyle.mainMenuWrapper}>
+        <div className={HomeStyle.bgImgWrapper}></div>
+
+        <div className={HomeStyle.mainMenuContainer}>
+          <Link to="/projectList" className={HomeStyle.mainMenu}>
+            <div className={HomeStyle.mainMenuBox}>
+              <h3>PROJECT</h3>
+              <div className={HomeStyle.borderBox} />
+              <h2>프로젝트</h2>
+            </div>
+          </Link>
+          <Link to="/profile" className={HomeStyle.mainMenu}>
+            <div className={HomeStyle.mainMenuBox}>
+              <h3>PROFILE</h3>
+              <div className={HomeStyle.borderBox} />
+              <h2>프로필</h2>
+            </div>
+          </Link>
+          <Link to="/introduce" className={HomeStyle.mainMenu}>
+            <div className={HomeStyle.mainMenuBox}>
+              <h3>INTRODUCE</h3>
+              <div className={HomeStyle.borderBox} />
+              <h2>자기소개서</h2>
+            </div>
+          </Link>
+          <Link to="/tech" className={HomeStyle.mainMenu}>
+            <div className={HomeStyle.mainMenuBox}>
+              <h3>TECH</h3>
+              <div className={HomeStyle.borderBox} />
+              <h2>보유 기술 현황</h2>
+            </div>
+          </Link>
+        </div>
+      </div>
+
+      {/* <div className={HomeStyle.contentContainer}>
         <div className={HomeStyle.contentDescription}>
           <h3 className={HomeStyle.introTitle}>방문을 환영합니다</h3>
           <p className={HomeStyle.introDescription}>
@@ -99,7 +146,7 @@ export default function Home() {
             PROJECT LIST
           </Link>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

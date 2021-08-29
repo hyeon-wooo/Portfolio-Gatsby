@@ -1,5 +1,53 @@
 [
   {
+    "name": "shootingstar-html",
+    "tech": ["Javascript", "React"],
+    "description": "원하는 엘리먼트에 별똥별이 쏟아지는 효과를 넣거나 반짝이는 별들을 그리는 모듈",
+    "term": "2021.07 - 2021.07",
+    "link": "shootingstar-html",
+    "existMainImg": true
+  },
+  {
+    "name": "와즈통 Waztong",
+    "tech": ["Typescript", "React-Native"],
+    "description": "다국어 학습 어플리케이션",
+    "term": "2021.07 - 2021.08",
+    "link": "waztong",
+    "existMainImg": true
+  },
+  {
+    "name": "react-native-video-controls-subtitle",
+    "tech": ["Javascript", "React-Native"],
+    "description": "Video 컴포넌트에 자막 출력 기능을 포함하는 컨트롤을 입힌 커스텀 자막 출력용 RN 컴포넌트",
+    "term": "2021.06 - 2021.06",
+    "link": "rn-video-controls-subtitle",
+    "existMainImg": false
+  },
+  {
+    "name": "쿠통 Kooltong",
+    "tech": ["Typescript", "React-Native", "Redux"],
+    "description": "한국어 강의 및 한국 문화 소개 어플리케이션",
+    "term": "2021.05 - 2021.08",
+    "link": "kooltong",
+    "existMainImg": true
+  },
+  {
+    "name": "스마트부고",
+    "tech": ["Typescript", "React-Native", "Redux"],
+    "description": "부조 관련 서비스 어플리케이션",
+    "term": "2021.03 - 2021.05",
+    "link": "smartbugo",
+    "existMainImg": true
+  },
+  {
+    "name": "스마트부고(서버)",
+    "tech": ["Typescript", "Node.js"],
+    "description": "스마트부고 앱을 위한 GraphQL API와 모바일웹을 제공하는 서버",
+    "term": "2021.03 - 2021.05",
+    "link": "smartbugo-server",
+    "existMainImg": false
+  },
+  {
     "name": "VocaGlory",
     "tech": ["Typescript", "React-Native"],
     "description": "안드로이드 전용 영단어 어플",

@@ -24,10 +24,14 @@
     {
       "title": "React Native",
       "details": [
+        "\"주력 스킬\"",
         "자율적으로 필요한 라이브러리 검색 및 적용 가능",
+        "필요한 경우 간단한 라이브러리는 분석 및 튜닝",
         "Navigation 사용 숙달",
-        "Ajax 활용 가능",
-        "Google Play에 어플 런칭 경험 (운영X)"
+        "Ajax, GraphQL을 이용한 통신",
+        "Google Play, App Store에 어플 배포 경험",
+        "Animation 적용 및 제어",
+        "함수형 컴포넌트 작성 숙달, 클래스형 컴포넌트 사용 가능"
       ]
     },
     {
@@ -47,14 +51,14 @@
       "title": "Redux",
       "details": [
         "전역 State 생성 및 Action 적용",
-        "React 컴포넌트에서 전역 State 변화에 대응하여 re-rendering 가능"
+        "특정 컴포넌트에서 전역 State 변화에 대응하여 re-rendering 가능"
       ]
     },
     {
       "title": "Node.js",
       "details": [
         "Express 프레임워크를 이용하여 서버 구축 가능",
-        "MariaDB, MongoDB 연동 가능",
+        "Sequelize ORM 라이브러리를 이용한 MySQL(MariaDB) 연동 및 쿼리 관리",
         "Json Web Token을 이용한 사용자 인증"
       ]
     },
@@ -75,7 +79,10 @@
     },
     {
       "title": "MariaDB, MySQL",
-      "details": ["데이터 CRUD, 서브쿼리, JOIN, 외래키 추가 등 기본적인 수준"]
+      "details": [
+        "데이터 CRUD, 서브쿼리, JOIN, 외래키 관리, 뷰, 인덱스 관리 등 기본 기능들 숙달",
+        "파티셔닝, 프로시저, 트리거, 동시성 제어에 관한 개념 숙지"
+      ]
     },
     {
       "title": "MongoDB",

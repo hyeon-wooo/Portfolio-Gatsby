@@ -36,7 +36,7 @@ _입력한 텍스트를 모스 부호로 변환하여 출력하는 윈도우 프
 
 <figcaption> [메인 화면] </figcaption>
 
-![caption="메인 화면"](/projectImgs/beepbeep-morse/beepbeep-morse-main.png "메인 화면")
+![caption="메인 화면"](/projectImgs/beepbeep-morse/main.png "메인 화면")
 
 <figcaption> [시연] </figcaption>
 

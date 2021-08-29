@@ -38,7 +38,7 @@ _로컬 컴퓨터의 .md 파일을 HTML 문자열로 변환해주는 라이브�
 
 <figcaption> [변환 전 (.md 파일)]] </figcaption>
 
-![caption="메인 화면"](/projectImgs/md-to-html/md-to-html-main.png "메인 화면")
+![caption="메인 화면"](/projectImgs/md-to-html/main.png "메인 화면")
 
 <figcaption> [변환 후 (html)] </figcaption>
 
